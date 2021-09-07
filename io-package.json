@@ -1,0 +1,124 @@
+{
+	"common": {
+		"name": "eibknx",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"titleLang": {
+			"en": "EIB-KNX",
+			"de": "EIB-KNX",
+			"ru": "EIB-KNX",
+			"pt": "EIB-KNX",
+			"nl": "EIB-KNX",
+			"fr": "EIB-KNX",
+			"it": "EIB-KNX",
+			"es": "EIB-KNX",
+			"pl": "EIB-KNX",
+			"zh-cn": "EIB-KNX"
+		},
+		"desc": {
+			"en": "Adapter for KNX/EIB System",
+			"de": "Adapter für KNX/EIB-System",
+			"ru": "Адаптер для системы KNX / EIB",
+			"pt": "Adaptador para sistema KNX / EIB",
+			"nl": "Adapter voor KNX/EIB-systeem",
+			"fr": "Adaptateur pour système KNX/EIB",
+			"it": "Adattatore per sistema KNX/EIB",
+			"es": "Adaptador para sistema KNX / EIB",
+			"pl": "Adapter do systemu KNX/EIB",
+			"zh-cn": "KNX/EIB 系统适配器"
+		},
+		"authors": [
+			"TheBam1990 <elektrobam@gmx.de>"
+		],
+		"keywords": [
+			"KNX"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"icon": "eibknx.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.eibknx/master/admin/eibknx.png",
+		"readme": "https://github.com/TheBam1990/ioBroker.eibknx/blob/master/README.md",
+		"loglevel": "info",
+		"restartAdapters": [
+			"vis"
+		],
+		"localLinks": {
+			"_default": "%web_protocol%://%ip%:%web_port%/vis/edit.html"
+		},
+		"mode": "daemon",
+		"type": "hardware",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "push",
+		"materialize": true,
+		"materializeTab": true,
+		"adminTab": {
+			"singleton": true,
+			"name": {
+				"en": "EIB-KNX",
+				"de": "EIB-KNX",
+				"ru": "EIB-KNX",
+				"pt": "EIB-KNX",
+				"nl": "EIB-KNX",
+				"fr": "EIB-KNX",
+				"it": "EIB-KNX",
+				"es": "EIB-KNX",
+				"pl": "EIB-KNX",
+				"zh-cn": "EIB-KNX"
+			},
+			"link": "",
+			"fa-icon": "info"
+		},
+		"supportCustoms": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			},
+			"vis"
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42",
+		"option3": 0,
+		"option4": "item1"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
